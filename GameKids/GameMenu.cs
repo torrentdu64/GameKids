@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace GameKids
 {
-    public partial class Registration : Form
+    public partial class GameMenu : Form
     {
-        public Registration()
+        public GameMenu()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            GameMenu gameMenu = new GameMenu();
-            gameMenu.Show();
-            this.Hide();
         }
     }
 }

@@ -19,8 +19,10 @@ namespace GameKids
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
 
+            GameMenu gameMenu = new GameMenu();
+            gameMenu.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
