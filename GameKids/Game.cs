@@ -142,19 +142,8 @@ namespace GameKids
             {
 
                 case "/":
-                    if (number2 == 0)
-                    {
-
-                    }
-                    else
-                    {
-                       
-                        
-                            double tes = number1 / number2;
-                            
-                       
-                       
-                    }
+                    answer = number1 / number2;
+                    //answer = int.Parse(tes.ToString());
                     break;
                 case "*":
                     answer = number1 * number2;

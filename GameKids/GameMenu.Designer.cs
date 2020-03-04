@@ -46,7 +46,7 @@
             // 
             // subtraction
             // 
-            this.subtraction.Location = new System.Drawing.Point(433, 154);
+            this.subtraction.Location = new System.Drawing.Point(419, 154);
             this.subtraction.Name = "subtraction";
             this.subtraction.Size = new System.Drawing.Size(75, 23);
             this.subtraction.TabIndex = 1;
@@ -70,7 +70,7 @@
             this.divition.Name = "divition";
             this.divition.Size = new System.Drawing.Size(75, 23);
             this.divition.TabIndex = 3;
-            this.divition.Text = "\\";
+            this.divition.Text = "/";
             this.divition.UseVisualStyleBackColor = true;
             this.divition.Click += new System.EventHandler(this.divition_Click);
             // 
