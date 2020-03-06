@@ -86,6 +86,11 @@ namespace GameKids
 
             performOperation(number1Parsing, number2Parsing, operation);
 
+            GameKids.Gamification calculate = new Gamification();
+
+            calculate.Addition(number1Parsing, number2Parsing);
+
+
 
             //foreach (int val in randomAnswwer)
             //{
@@ -121,38 +126,54 @@ namespace GameKids
             suggestion[3] = answer;
 
 
+            List<int> randomNumber = new List<int>();
+
+            
+            //randomNumber.Add(new Random().Next(1, 10));
+           // randomNumber.Add(new Random().Next(1, 10));
+           // randomNumber.Add(new Random().Next(1, 10));
+            //randomNumber.Add(answer);
+
+            randomNumber.Sort();
 
 
 
-
-            response1.Text = suggestion[shuffe[0]].ToString();
+             response1.Text = suggestion[shuffe[0]].ToString();
             response2.Text = suggestion[shuffe[1]].ToString();
             response3.Text = suggestion[shuffe[2]].ToString();
-            response4.Text = suggestion[shuffe[3]].ToString();
+             response4.Text = suggestion[shuffe[3]].ToString();
 
-
+           // response1.Text = randomNumber[0].ToString();
+           // response2.Text = randomNumber[1].ToString();
+           // response3.Text = randomNumber[2].ToString();
+          //  response4.Text = randomNumber[3].ToString();
         }
 
 
 
         private void performOperation(int number1, int number2, String operation)
         {
-
+            Gamification game = new Gamification();
             switch (operation)
             {
 
                 case "/":
-                    answer = number1 / number2;
+                    //answer = number1 / number2;
                     //answer = int.Parse(tes.ToString());
+                    game.Divition(number1, number2);
+                    game.getAnswer();
                     break;
                 case "*":
-                    answer = number1 * number2;
+                    game.Multiplication(number1, number2);
+                    answer = game.getAnswer();
                     break;
                 case "-":
-                    answer = number1 - number2;
+                    game.Substraction(number1, number2);
+                    answer = game.getAnswer();
                     break;
                 case "+":
-                    answer = number1 + number2;
+                    game.Addition(number1 , number2);
+                    answer = game.getAnswer();
                     break;
             }
 

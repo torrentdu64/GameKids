@@ -13,14 +13,22 @@ namespace GameKids
     public partial class GameMenu : Form
     {
         string choise;
+        User user;
+        
+
         public GameMenu()
         {
             InitializeComponent();
             
+            
         }
+
+       
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+           
             choise = addition.Text;
             Game game = new Game(choise);
             game.Show();
