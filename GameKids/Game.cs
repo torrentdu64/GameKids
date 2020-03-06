@@ -86,9 +86,9 @@ namespace GameKids
 
             performOperation(number1Parsing, number2Parsing, operation);
 
-            GameKids.Gamification calculate = new Gamification();
+            //GameKids.Gamification calculate = new Gamification();
 
-            calculate.Addition(number1Parsing, number2Parsing);
+            //calculate.Addition(number1Parsing, number2Parsing);
 
 
 
@@ -121,7 +121,7 @@ namespace GameKids
             suggestion = randomAnswwer.ToArray();
             var rng = new Random();
             var shuffe = Enumerable.Range(0, 4).OrderBy(i => rng.Next()).ToArray();
-
+            
 
             suggestion[3] = answer;
 
@@ -137,43 +137,49 @@ namespace GameKids
             randomNumber.Sort();
 
 
+           var clearSuggestion =  suggestion.Distinct().ToArray();
 
-             response1.Text = suggestion[shuffe[0]].ToString();
-            response2.Text = suggestion[shuffe[1]].ToString();
-            response3.Text = suggestion[shuffe[2]].ToString();
-             response4.Text = suggestion[shuffe[3]].ToString();
+            //response1.Text = suggestion[shuffe[0]].ToString();
+           // response2.Text = suggestion[shuffe[1]].ToString();
+           // response3.Text = suggestion[shuffe[2]].ToString();
+            // response4.Text = suggestion[shuffe[3]].ToString();
 
-           // response1.Text = randomNumber[0].ToString();
-           // response2.Text = randomNumber[1].ToString();
-           // response3.Text = randomNumber[2].ToString();
-          //  response4.Text = randomNumber[3].ToString();
+            response1.Text = clearSuggestion[0].ToString();
+            response2.Text = clearSuggestion[1].ToString();
+            response3.Text = clearSuggestion[2].ToString();
+            response4.Text = clearSuggestion[3].ToString();
+
+            // response1.Text = randomNumber[0].ToString();
+            // response2.Text = randomNumber[1].ToString();
+            // response3.Text = randomNumber[2].ToString();
+            //  response4.Text = randomNumber[3].ToString();
         }
 
 
 
         private void performOperation(int number1, int number2, String operation)
         {
-            Gamification game = new Gamification();
+            Gamification calculate = new Gamification();
             switch (operation)
             {
 
                 case "/":
                     //answer = number1 / number2;
                     //answer = int.Parse(tes.ToString());
-                    game.Divition(number1, number2);
-                    game.getAnswer();
+                    calculate.Divition(number1, number2);
+                    calculate.getAnswer();
                     break;
                 case "*":
-                    game.Multiplication(number1, number2);
-                    answer = game.getAnswer();
+                    calculate.Multiplication(number1, number2);
+                    answer = calculate.getAnswer();
                     break;
                 case "-":
-                    game.Substraction(number1, number2);
-                    answer = game.getAnswer();
+                    calculate.Substraction(number1, number2);
+                    answer = calculate.getAnswer();
                     break;
                 case "+":
-                    game.Addition(number1 , number2);
-                    answer = game.getAnswer();
+                    calculate.Addition(number1 , number2);
+                    answer = calculate.getAnswer();
                     break;
             }
 
@@ -236,6 +242,13 @@ namespace GameKids
                 MessageBox.Show("Wrong answer");
             }
             initializeGame();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            GameMenu back = new GameMenu();
+            back.Show();
+            this.Hide();
         }
     }
 }

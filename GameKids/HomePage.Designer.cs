@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.inputUserName = new System.Windows.Forms.TextBox();
+            this.inputPassword = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,19 +46,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // inputUserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(187, 121);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.inputUserName.Location = new System.Drawing.Point(187, 121);
+            this.inputUserName.Name = "inputUserName";
+            this.inputUserName.Size = new System.Drawing.Size(100, 20);
+            this.inputUserName.TabIndex = 1;
+            this.inputUserName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // textBox2
+            // inputPassword
             // 
-            this.textBox2.Location = new System.Drawing.Point(187, 196);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.inputPassword.Location = new System.Drawing.Point(187, 196);
+            this.inputPassword.Name = "inputPassword";
+            this.inputPassword.Size = new System.Drawing.Size(100, 20);
+            this.inputPassword.TabIndex = 2;
             // 
             // button2
             // 
@@ -96,11 +97,12 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.inputPassword);
+            this.Controls.Add(this.inputUserName);
             this.Controls.Add(this.button1);
             this.Name = "HomePage";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.HomePage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -109,8 +111,8 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox inputUserName;
+        private System.Windows.Forms.TextBox inputPassword;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

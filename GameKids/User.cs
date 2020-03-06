@@ -76,6 +76,13 @@ namespace GameKids
             this.password = password;
             this.schoolYear = schoolYear;
             this.teacherName = teacherName;
+            this.userName = userName;
+        }
+
+        public User( string userName, string password)
+        {
+            this.userName = userName;
+            this.password = password;
         }
 
         public string getFirstName()

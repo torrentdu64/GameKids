@@ -38,6 +38,7 @@
             this.response4 = new System.Windows.Forms.Button();
             this.number1 = new System.Windows.Forms.Label();
             this.test = new System.Windows.Forms.RichTextBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // operatorId
@@ -135,11 +136,22 @@
             this.test.TabIndex = 11;
             this.test.Text = "";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(54, 392);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 12;
+            this.btnBack.Text = "btnBack";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.test);
             this.Controls.Add(this.number1);
             this.Controls.Add(this.response4);
@@ -169,5 +181,6 @@
         private System.Windows.Forms.Button response4;
         private System.Windows.Forms.Label number1;
         private System.Windows.Forms.RichTextBox test;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -13,15 +13,24 @@ namespace GameKids
     public partial class GameMenu : Form
     {
         string choise;
-        User user;
+        Object user;
         
 
         public GameMenu()
         {
             InitializeComponent();
-            
-            
+            foreach(User user in User.listUsers)
+            {
+                labelUserName.Text = user.getUserName().ToString();
+            }
+           
+
         }
+
+       
+
+
+      
 
        
 
@@ -37,7 +46,7 @@ namespace GameKids
 
         private void GameMenu_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)

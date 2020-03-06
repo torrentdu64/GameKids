@@ -19,10 +19,22 @@ namespace GameKids
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            GameMenu gameMenu = new GameMenu();
-            gameMenu.Show();
-            this.Hide();
+            if(inputUserName.Text == "")
+            {
+                MessageBox.Show("Field is require");
+            }else if(inputPassword.Text == "")
+            {
+                MessageBox.Show("Field is require");
+            }
+            else
+            {
+                User user = new User(inputUserName.Text, inputPassword.Text);
+                GameKids.User.listUsers.Add(user);
+                GameMenu gameMenu = new GameMenu();
+                gameMenu.Show();
+                this.Hide();
+            }
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,6 +42,16 @@ namespace GameKids
             Registration registration = new Registration();
             registration.Show();
             this.Hide();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
