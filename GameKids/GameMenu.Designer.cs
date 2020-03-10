@@ -34,6 +34,7 @@
             this.divition = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.labelUserName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // addition
@@ -87,17 +88,29 @@
             // 
             // labelUserName
             // 
+            this.labelUserName.AccessibleName = "username";
             this.labelUserName.AutoSize = true;
             this.labelUserName.Location = new System.Drawing.Point(278, 72);
             this.labelUserName.Name = "labelUserName";
-            this.labelUserName.Size = new System.Drawing.Size(0, 13);
+            this.labelUserName.Size = new System.Drawing.Size(53, 13);
             this.labelUserName.TabIndex = 5;
+            this.labelUserName.Text = "username";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(241, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Hello";
             // 
             // GameMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.divition);
@@ -120,5 +133,6 @@
         private System.Windows.Forms.Button divition;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label labelUserName;
+        private System.Windows.Forms.Label label1;
     }
 }

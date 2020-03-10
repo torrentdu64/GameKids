@@ -18,6 +18,8 @@ namespace GameKids
         Boolean Success;
         int answer;
 
+        int countOfAnswer;
+
 
         public Game(string operation)
         {
@@ -153,6 +155,8 @@ namespace GameKids
             // response2.Text = randomNumber[1].ToString();
             // response3.Text = randomNumber[2].ToString();
             //  response4.Text = randomNumber[3].ToString();
+
+            countOfAnswer 
         }
 
 
